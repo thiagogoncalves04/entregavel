@@ -1,5 +1,7 @@
-import org.omg.CORBA.INTERNAL;
-import sun.font.CompositeGlyphMapper;
+package modelos;
+
+import modelos.Aluno;
+import modelos.Curso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +23,10 @@ public class DigitalHouseManager {
         for (Curso curso : listaCurso) {
             if(curso.equals(codCurso)){
                 listaCurso.remove(curso);
-                System.out.println("Curso: " + curso.getNome() + " removido com sucesso!");
+                System.out.println("modelos.Curso: " + curso.getNome() + " removido com sucesso!");
             }
             else{
-                System.out.println("Curso não encontrado!");
+                System.out.println("modelos.Curso não encontrado!");
             }
 
         }
@@ -36,7 +38,7 @@ public class DigitalHouseManager {
         ProfessorAdj professorAdj = new ProfessorAdj(nome, sobrenome, codProfessor, qdeHorasMonitoria);
         listaProfessor.add(professorAdj);
         System.out.println("==============================================================================================");
-        System.out.println("O Professor Adjunto: " + nome + " " + sobrenome +  " foi adicionado com sucesso!");
+        System.out.println("O modelos.Professor Adjunto: " + nome + " " + sobrenome +  " foi adicionado com sucesso!");
         System.out.println("==============================================================================================");
 
     }
@@ -60,9 +62,9 @@ public class DigitalHouseManager {
         for (Professor professor : listaProfessor) {
            if(professor.equals(codProfessor)){
                listaProfessor.remove(professor);
-               System.out.println("Professor: " + professor.getNome() + " " + professor.getSobrenome()+ " removido com sucesso!");
+               System.out.println("modelos.Professor: " + professor.getNome() + " " + professor.getSobrenome()+ " removido com sucesso!");
            } else {
-               System.out.println("Professor não encontrado!");
+               System.out.println("modelos.Professor não encontrado!");
            }
 
         }
@@ -105,7 +107,7 @@ public class DigitalHouseManager {
             Matricula matricula = new Matricula(aluno, curso);
             listaMatricula.add(matricula);
             System.out.println("----------------------------------------------------------------------");
-            System.out.println("Aluno: " + aluno.getNome() + " " + aluno.getSobrenome() + " matriculado com sucesso no curso: " + curso.getNome());
+            System.out.println("modelos.Aluno: " + aluno.getNome() + " " + aluno.getSobrenome() + " matriculado com sucesso no curso: " + curso.getNome());
             System.out.println("----------------------------------------------------------------------");
 
         }
@@ -119,7 +121,7 @@ public class DigitalHouseManager {
               try{
                   return ((ProfessorTit)umProfessor);
                 } catch (ClassCastException erro){
-                  System.out.println("Códio de Professor Titular inválido.");
+                  System.out.println("Códio de modelos.Professor Titular inválido.");
               }
             }
         }
@@ -133,7 +135,7 @@ public class DigitalHouseManager {
                try{
                    return ((ProfessorAdj)umProfessor);
                } catch (ClassCastException erro){
-                   System.out.println("Código de Professor Adjunto inválido");
+                   System.out.println("Código de modelos.Professor Adjunto inválido");
                }
             }
         }

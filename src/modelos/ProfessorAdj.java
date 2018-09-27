@@ -1,3 +1,7 @@
+package modelos;
+
+import modelos.Professor;
+
 public class ProfessorAdj extends Professor {
     private int qtdeHorasMonitoria;
 

@@ -1,4 +1,8 @@
-import java.time.LocalDate;
+package modelos;
+
+import modelos.Aluno;
+import modelos.Curso;
+
 import java.util.Date;
 import java.util.Objects;
 

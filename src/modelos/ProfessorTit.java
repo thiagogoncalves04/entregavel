@@ -1,3 +1,7 @@
+package modelos;
+
+import modelos.Professor;
+
 public class ProfessorTit extends Professor {
 
     private String especialidade;

@@ -1,3 +1,5 @@
+package modelos;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +63,7 @@ public class Curso {
            }
        } else {
            System.out.println("==============================================================================================");
-           System.out.println(" Aluno(a)  " + aluno.getNome() + " já está matriculado(a) neste curso e não pode ser matriculado novamente!");
+           System.out.println(" modelos.Aluno(a)  " + aluno.getNome() + " já está matriculado(a) neste curso e não pode ser matriculado novamente!");
            System.out.println("==============================================================================================");
            return false;
        }
