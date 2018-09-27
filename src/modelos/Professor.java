@@ -2,6 +2,7 @@ package modelos;
 
 import java.util.Objects;
 
+// Já que esta classe não é instanciada ela poderia ser abstrata
 public class Professor {
     private String nome;
     private String sobrenome;

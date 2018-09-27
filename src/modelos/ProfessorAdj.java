@@ -5,6 +5,7 @@ import modelos.Professor;
 public class ProfessorAdj extends Professor {
     private int qtdeHorasMonitoria;
 
+    // Este construtor nao esta fazendo nada, ou deveria ser implementado ou apagado.
     public ProfessorAdj(String nome, String sobrenome, int codProfessor, int qtdeHorasMentoria){
 
     }

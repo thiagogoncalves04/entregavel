@@ -15,11 +15,17 @@ public class DigitalHouseManager {
 
 
     public void registrarCurso(String nome, Integer codCurso, Integer qtdeMaxAlunos){
+        // Cuidado ao aninhar muito as contruções e métodos
+        // acho que aqui está ok, mas tem que tomar cuidado para não gerar coisas assim:
+        // lista.add(new Curso(nome, codCurso, qtdAlunos, new Aluno("Fabio"));
         listaCurso.add(new Curso(nome, codCurso, qtdeMaxAlunos));
     }
 
 
     public void excluirCurso(int codCurso){
+        // Aqui tem um pequeno bug. Esta comparando curso (do tipo Curso) com codCurso (do tipo int), esta comparacao
+        // nunca sera verdadeira e sempre vai imprimir curso nao encontrado
+        // Alem disso, esta 'curso nao encontrado' para todos os itens da lista
         for (Curso curso : listaCurso) {
             if(curso.equals(codCurso)){
                 listaCurso.remove(curso);
@@ -54,13 +60,16 @@ public class DigitalHouseManager {
 
     }
 
+    // faltou implementar este metodo
     public void addProfessorTit(Professor professor){
-
+        // e seria algo bem simples como:
+//        listaProfessor.add(professor);
     }
 
     public void excluirProfessor(Integer codProfessor){
+        // Este excluir tem os msms problemas do excluir curso
         for (Professor professor : listaProfessor) {
-           if(professor.equals(codProfessor)){
+           if(professor.equals(codProfessor)){ // aqui o correto seria if(professor.getCodProfessor().equals(codProfessor))
                listaProfessor.remove(professor);
                System.out.println("modelos.Professor: " + professor.getNome() + " " + professor.getSobrenome()+ " removido com sucesso!");
            } else {
@@ -142,7 +151,7 @@ public class DigitalHouseManager {
         return null;
     }
 
-
+    // O nome deste metodos poderia ser no plural, alocarProfessoresParaUmCurso
     public void alocarProfessorParaUmCurso(Integer codCurso, Integer codProfessorTit, Integer codProfessorAdj) {
         ProfessorTit professorTit = buscarProfessorTit(codProfessorTit);
         ProfessorAdj professorAdj = buscarProfessorAdj(codProfessorAdj);
